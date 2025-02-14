@@ -1,0 +1,547 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+
+    --main-color:#d3ad7f;
+    --black : #13131a;
+    --background: #010103;
+    --border:.1rem solid rgba(255,255,255,0.3);
+}
+
+*{
+    font-family: "Roboto", sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none ;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:  0.2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent ;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 0.5rem;
+}
+
+
+body{
+    background: var(--background);
+}
+
+section {
+    padding: 2rem;
+}
+
+.header {
+    background: var(--background);
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+    padding: .8rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .navbar {
+    display: flex;
+    margin-left: auto; /* Push it to the right */
+    gap: 2rem; /* Optional: Adds space between navbar items */
+}
+
+
+.header .logo img{
+    height: 10rem;
+    width: 10rem;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:#fff;
+
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div{
+    color: var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+    right: 0;
+}
+
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #433e30;
+    color: #4e4e4e;
+    margin: 0;
+    padding: 0;
+}
+
+.contact {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 3em;
+    color: #333;
+}
+
+.contact-description {
+    font-size: 2.5em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #1a73e8; /* Link color */
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.business-hours {
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.business-hours h3 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url("Product Photos/image2(2).jpeg") no-repeat;
+    background-size: cover;
+    background-position: center -25%;
+}
+
+.home .content{
+    max-width: 60rem;
+  
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+
+}
+
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+
+    padding:1rem 0;
+
+    color: #eee;
+}
+
+/* General Styling */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Menu Section */
+.menu {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    min-height: 95vh;
+    background-color: var(--background);
+}
+
+.menu-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #c2bcc3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Box Container */
+/* Flip Box Styling */
+.menu .box {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px; /* Perspective for 3D effect */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.menu .box .box-front,
+.menu .box .box-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.menu .box .box-front {
+    background-color: #e0e0e0;
+}
+
+.menu .box .box-back {
+    background-color: #f9f9f9;
+    transform: rotateY(180deg); /* Initially hidden behind the front */
+    text-align: center;
+    color: #333;
+}
+
+.menu .box:hover .box-front {
+    transform: rotateY(180deg);
+}
+
+.menu .box:hover .box-back {
+    transform: rotateY(0deg);
+}
+
+/* Image Styling */
+.menu .box .box-front img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Dish Name */
+.menu .box h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Description */
+.menu .box p {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Pricing on the back */
+.menu .box .box-back h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu .box .box-back p {
+    font-size: 1.2rem;
+    color: #e57373;
+}
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Box Styling */
+.menu .box {
+    background-color: #e0e0e0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu .box:hover {
+    transform: translateY(-10px);
+}
+
+/* Image Styling */
+.menu .box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Dish Name */
+.menu .box h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Description */
+.menu .box p {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Price */
+.menu .box .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #e57373;
+}
+
+/* About Section Styling */
+.about {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4; /* Light background for the About section */
+    color: #333; /* Text color for readability */
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.about .content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #13131a; /* Dark text color for the heading */
+}
+
+.about .content p {
+    margin: 1.5rem 0;
+    line-height: 2;
+    color: #666; /* Slightly lighter text color for paragraph */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .about .content h2 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .about .content p {
+        font-size: 1.4rem; /* Smaller text for mobile view */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    section {
+        padding: 2rem;
+    }
+    .home .content h3{
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        color: #fff;
+    
+    }
+    .home{
+        justify-content: center;
+        background-position: left;
+        background-color: slategrey;
+        text-align: center;
+    }
+    .home .content p{
+        font-size: 2.5rem;
+        color: #FAF9F6;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+        justify-items: space-between;
+    }
+
+    .menu {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+ }
+
+ @media (max-width: 768px) {
+    .header {
+        background: var(--background);
+        display: flex;
+        align-items: center;
+        justify-items: space-between;
+        padding: .3rem 7%;
+        border-bottom: var(--border);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    .header .navbar {
+        display: none; /* Hide navbar on small screens */
+        background-color: transparent; /* Initially transparent */
+        transition: background-color 0.3s ease; /* Smooth background transition */
+    }
+
+    .menu .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+    }
+    
+    
+    /* Change navbar background to black when active */
+    .header .navbar.active {
+        display: block; /* Show navbar when 'active' class is added */
+        background-color: black; /* Set background color to black */
+    }
+
+    .home{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: url("WhatsApp Photo/WhatsApp Image 2025-01-30 at 16.22.45_f9377ea6.jpg") no-repeat;
+        background-size: cover;
+        background-position: center -25%;
+    }
+
+    #menu-btn {
+        display: inline-block; /* Show hamburger button */
+    }
+}
+
+
+ @media (max-width: 768px) {
+    .header .navbar {
+        display: none; /* Hide navbar on small screens */
+    }
+    
+    .header .navbar.active {
+        display: block; /* Show navbar when 'active' class is added */
+    }
+
+    .header .icons {
+        margin-left: auto;  /* Pushes the icons to the right end */
+        display: flex;
+        align-items: center;
+    }
+
+    #menu-btn {
+        display: inline-block;
+        font-size: 2.5rem;  /* Adjust the size as needed */
+        cursor: pointer;
+    }
+}
+
+/* Other existing styles */
+
+
+/* You may already have other styles for your navbar items */
+
+ @media (max-width:768px){
+
+   
+    #menu-btn{
+        display: inline-block;
+    }
+    
+    .header .navbar{
+        position: absolute;
+        top: 100%; right: -100%;
+        background: #fff;
+        background: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+    
+    
+    .header .navbar.active{
+        right: 0;
+    }
+    
+
+
+    .header .navbar a{
+        display: block;
+        margin: 1.5rem ;
+        padding: .5rem;
+        font-size: 2rem;
+
+    }
+ }
+
